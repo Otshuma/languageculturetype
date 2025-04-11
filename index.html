@@ -1,40 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Specifies the document type as HTML5 -->
         <meta charset="UTF-8">
-        <!-- Ensures proper rendering and touch zooming on mobile devices -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
         <!-- Title of the page (appears in the browser tab) -->
         <title>ARCHIVE</title>
 
-     <!-- Sets the favicon (small icon in browser tab) -->
+       
         <!-- <link rel="icon" type="image/x-icon" href=""> -->
     
-        <!-- Links external CSS file for styling -->
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
-        <!-- Google Analytics Tracking Script -->
-        <!-- Loads the Google Analytics tracking script asynchronously -->
         
-        <script>
-            // Initializes the Google Analytics data layer
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-        
-            // Sends the configuration command to Google Analytics
-            gtag('js', new Date());
-            gtag('config', 'G-B1QSW29N2C');
-        </script>
-
     </head>
 
     <body>
-        <div class="interactive-container"> <!-- Smaller circles -->
+        <!-- Interactive container with all the current circles and ovals -->
+        <div class="interactive-container"> 
+
+            <!-- Smaller circles -->
             <div style="width: 30px; height: 30px; left: 589px; top: 250px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
             <div style="width: 67px; height: 67px; left: 196px; top: 315px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
             <div style="width: 30px; height: 30px; left: 428px; top: 201px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
@@ -90,15 +77,17 @@
             <div style="width: 67px; height: 67px; left: 925px; top: 718px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
             <div style="width: 30px; height: 30px; left: 1259px; top: 422px; position: absolute; background: #D9D9D9; border-radius: 9999px"></div>
             <div style="width: 30px; height: 30px; left: 1058px; top: 633px; position: absolute; background: #D9D9D9; border-radius: 19999px"></div>
-    
-            <!-- 6 Big ovals) -->
-            <div style="width: 759px; height: 270px; left: 45px; top: 790px; position: absolute; border-radius: 50%; border: 3px #D9D9D9 solid"></div>
+
+          <!-- 6 Big ovals) -->
+           <div style="width: 759px; height: 270px; left: 45px; top: 790px; position: absolute; border-radius: 50%; border: 3px #D9D9D9 solid"></div>
             <div style="width: 759px; height: 270px; left: 946px; top: 791px; position: absolute; border-radius: 50%; border: 3px #D9D9D9 solid"></div>
             <div style="width: 759px; height: 270px; left: 934px; top: 62px; position: absolute; border-radius: 50%; border: 3px #D9D9D9 solid"></div>
             <div style="width: 1654px; height: 508px; left: 48px; top: 308px; position: absolute; border-radius: 50%; border: 3px #D9D9D9 solid"></div>
             <div style="width: 298px; height: 184px; left: 418px; top: 137px; position: absolute; border-radius: 50%; border: 3px #D9D9D9 solid"></div>
             <div style="width: 332px; height: 184px; left: 48px; top: 206px; position: absolute; border-radius: 50%; border: 3px #D9D9D9 solid"></div>
-    
+            
+
+
             <!-- Text elements -->
             <div style="width: 394px; height: 46px; left: 228px; top: 889px; position: absolute; text-align: center">
                 <span style="color: black; font-size: 18px; font-family: Inter; font-weight: 700; word-wrap: break-word">John Hudson<br/></span>
@@ -106,7 +95,7 @@
             </div>
             
             <div style="width: 502px; height: 31px; left: 536px; top: 58px; position: absolute; text-align: left; color: black; font-size: 25px; font-family: Inter; font-weight: 700; word-wrap: break-word">LANGUAGE CULTURE TYPE</div>
-    
+            
             <div style="width: 332px; height: 25px; left: 725px; top: 533px; position: absolute; text-align: center">
                 <span style="color: black; font-size: 18px; font-family: Inter; font-weight: 700; word-wrap: break-word">Thomas Milo<br/></span>
                 <span style="color: black; font-size: 18px; font-family: Inter; font-weight: 500; word-wrap: break-word">Arabic script and typography</span>
@@ -128,12 +117,20 @@
                 <span style="color: black; font-size: 18px; font-family: Inter; font-weight: 700; word-wrap: break-word">Robert Bringhurst<br/></span>
                 <span style="color: black; font-size: 18px; font-family: Inter; font-weight: 500; word-wrap: break-word">Voices, Languages and scripts around the world</span>
             </div>
-
-
-
+        </div>
+        
+        <!-- Modal for displaying details -->
+        <div class="center-display">
+            <div class="center-content">
+                <div class="close-button">&times;</div>
+                <img id="center-image" src="" alt="Selected item">
+                <h2 id="center-name"></h2>
+                <h3 id="center-title"></h3>
+                <p id="center-year"></p>
+                <p id="center-body"></p>
+            </div>
         </div>
        
-        <script src="your-script.js"></script> 
-
+        <script src="google-sheets.js"></script> 
     </body>
 </html>

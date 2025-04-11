@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const SHEET_ID = '1zZXtHdqkcuOCsz8FMHXMs_B601bF-EGkpnyF98r5Pwg';
-    const API_KEY = 'AIzaSyAv7y9zfxaQ8uqb0mkgsqV_HJjBLxRK2eo';
+    const API_KEY = 'AIzaSyAH8nfE3rAD9BflVyq6abA4urNnzV8UODQ';
     const RANGE = 'Sheet1!A1:J500';
 
     const SHEET_API_URL = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${API_KEY}`;
@@ -40,7 +40,7 @@ function renderData(data) {
     const centerContent = document.querySelector('.center-content'); // Clickable area to close the modal
 
     data.forEach(item => {
-        const { article_author, section, page, description, top, left, image } = item; // Destructure properties from item
+        const { section, page, description, top, left, image } = item; // Destructure properties from item
 
         // Check if image is missing or empty, and skip this item if so
         if (!image || !image.trim()) {
@@ -51,8 +51,8 @@ function renderData(data) {
         // Create a div container for the item
         const container = document.createElement('div');
         container.className = classes || 'image-container'; // Assign custom class or default class
-        container.style.top = `${parseFloat(top) || 0}%`; // Set vertical position
-        container.style.left = `${parseFloat(left) || 0}%`; // Set horizontal position
+        container.style.top = `${parseFloat(top) || 0}px`; // Set vertical position
+        container.style.left = `${parseFloat(left) || 0}px`; // Set horizontal position
 
         // Store metadata as data attributes
         container.setAttribute('data-name', name || 'Unknown');
